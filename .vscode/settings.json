@@ -1,0 +1,9 @@
+{
+    "prettier.jsxBracketSameLine": true,
+    "files.autoSave": "onWindowChange",
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "prettier.jsxSingleQuote": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "prettier.singleQuote": true,
+    "prettier.useTabs": true
+}
