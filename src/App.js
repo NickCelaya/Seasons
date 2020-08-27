@@ -1,17 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-const App = () => {
-	window.navigator.geolocation.getCurrentPosition(
-		(position) => console.log(position),
-		(err) => console.log(err)
-	);
-
-	return (
-		<div className='App'>
-			<div>Latitude:</div>
-		</div>
-	);
-};
+class App extends Component {
+	render() {
+		window.navigator.geolocation.getCurrentPosition(
+			(position) => console.log(position),
+			(err) => console.log(err)
+		);
+		return <div>Latitude: </div>;
+	}
+}
 
 export default App;
