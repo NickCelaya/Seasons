@@ -14,7 +14,7 @@ class App extends Component {
 	}
 
 	render() {
-		return <div>You are at Latitude: {this.state.latitude}</div>;
+		return <div>Latitude: {this.state.latitude}</div>;
 	}
 }
 export default App;
