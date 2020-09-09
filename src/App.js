@@ -7,14 +7,14 @@ class App extends Component {
 
 	componentDidMount() {
 		window.navigator.geolocation.getCurrentPosition(
-			position => this.setState({ latitude: position.coords.latitude }),
-			err => this.setState({ errorMessage: err.message })
+			(position) => this.setState({ latitude: position.coords.latitude }),
+			(err) => this.setState({ errorMessage: err.message })
 		);
 	}
 
 	render() {
 		if (this.state.errorMessage && !this.state.latitude) {
-			return <SeasonDisplay err={this.state.err} />;
+			return <SeasonDisplay err={this.state.errorMessage} />;
 		}
 		if (!this.state.errorMessage && this.state.latitude) {
 			return <SeasonDisplay lat={this.state.latitude} />;
