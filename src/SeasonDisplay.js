@@ -1,4 +1,5 @@
 import React from 'react';
+import './SeasonDisplay.css';
 
 const SeasonDisplay = (props) => {
 	const seasonConfig = {
@@ -28,11 +29,16 @@ const SeasonDisplay = (props) => {
        based on the season once getSeason is called the keys will render and show the seasonal information */
 	const { weather, iconName } = seasonConfig[season];
 
+	/*the i element in the jsx has semantic ui classes and icons which is why the classname is long.
+     its following semanti-ui rules*/
+
+	// we are using our own css file to position and color the icons and styling
+
 	return (
-		<div>
-			<i className={`${iconName} icon`} />
+		<div className={`season-display ${season}`}>
+			<i className={` icon-left massive ${iconName} icon`} />
 			<h1>{weather}</h1>
-			<i className={`${iconName} icon`} />
+			<i className={` icon-right massive ${iconName} icon`} />
 		</div>
 	);
 };
