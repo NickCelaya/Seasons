@@ -17,6 +17,7 @@
 	height: 100vh;
 }
 
+/* targeting the icon jsx element to be a color based on the value on that element. Winter or summer */
 .season-display.winter i {
 	color: blue;
 }
@@ -25,10 +26,10 @@
 	color: red;
 }
 
-.winter {
+.season-display.winter {
 	background-color: aliceblue;
 }
 
-.summer {
+.season-display.summer {
 	background-color: orange;
 }
