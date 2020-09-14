@@ -2,6 +2,7 @@ import React from 'react';
 import './SeasonDisplay.css';
 
 const SeasonDisplay = (props) => {
+	// an easier way to keep track of the season and icon to be used in our jsx based on the season after getSeason is called.
 	const seasonConfig = {
 		summer: {
 			weather: "Let's hit the beach",
