@@ -13,19 +13,18 @@ class App extends Component {
 		);
 	}
 
-	render() {
+	showContent = () => {
 		if (this.state.errorMessage && !this.state.latitude) {
-			return <SeasonDisplay err={this.state.errorMessage} />;
+			return <div>Error:{this.state.message}</div>;
 		}
 		if (!this.state.errorMessage && this.state.latitude) {
 			return <SeasonDisplay lat={this.state.latitude} />;
 		}
+		return <Spinner message={'Please accept location request'} />;
+	};
 
-		return (
-			<div>
-				<Spinner message={'Please accept location request'} />
-			</div>
-		);
+	render() {
+		return <div>{this.showContent()}</div>;
 	}
 }
 export default App;
