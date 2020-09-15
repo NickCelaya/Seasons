@@ -14,8 +14,8 @@ const SeasonDisplay = (props) => {
 		},
 	};
 
-	//getSeason function takes two arguments lat & month to determine summer or winte.
-	//We'll pass lat from props from app.js and call new Date().getMonth() when we call the getSeason function
+	//getSeason function takes two arguments lat & month to determine summer or winter.
+	//We'll pass lat as props from app.js and call new Date().getMonth() to get the month we getSeason is called.
 	const getSeason = (lat, month) => {
 		if (month > 2 && month < 9) {
 			return lat > 0 ? 'summer' : 'winter';

@@ -34,4 +34,5 @@ class App extends Component {
 		return <div>{this.showContent()}</div>;
 	}
 }
+
 export default App;
